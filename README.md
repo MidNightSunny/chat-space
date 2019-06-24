@@ -5,7 +5,6 @@
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
-|user_id|integer|null: false|
 
 ### Association
 - has_many :chatgroups, through: :members
