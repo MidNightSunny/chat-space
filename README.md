@@ -36,6 +36,7 @@
 |messages|text|foreign_key: true|
 |user_id|integer|null: false, foreign_key: true|
 |created_at|datatime|null: false|
+|updated_at|datatime|null: false|
 
 ### Association
 - has_many :messages
