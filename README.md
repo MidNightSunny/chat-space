@@ -19,7 +19,6 @@
 |messages|text|foreign_key: true|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
-|created_at|datetime|null: false|
 
 ### Association
 - belongs_to :group
@@ -31,8 +30,6 @@
 |------|----|-------|
 |messages|text|foreign_key: true|
 |user_id|integer|null: false, foreign_key: true|
-|created_at|datetime|null: false|
-|updated_at|datetime|null: false|
 
 ### Association
 - has_many :messages
@@ -44,8 +41,6 @@
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
-|created_time|datetime|null: false|
-|updated_at|datetime|null: false|
 
 ### Association
 - belongs_to :group
