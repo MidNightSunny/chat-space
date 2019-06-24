@@ -10,14 +10,16 @@
 
 ### Association
 - has_many :chatgroups, through: :members
-- has_many :messages
+- has_many :contents
 
 ## messagesテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|messages|text|foreign_key: true|
+|content|text| |
+|image|string||
 |user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 
 ### Association
@@ -32,7 +34,7 @@
 |user_id|integer|null: false, foreign_key: true|
 
 ### Association
-- has_many :messages
+- has_many :contents
 - has_many :users ,through: :members
 
 ## membersテーブル
