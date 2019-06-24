@@ -5,12 +5,8 @@
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false, unique :true|
-|mail_addless|string|null: false, unique :true|
-|password_digest|string|null: false|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
-|created_at|datetime|null: false|
-|updated_at|datetime|null: false|
 
 ### Association
 - has_many :chatgroups, through: :members
