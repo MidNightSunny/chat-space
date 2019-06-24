@@ -11,12 +11,13 @@
 ### Association
 - has_many :chatgroups, through: :members
 - has_many :contents
+  has_many :members
 
 ## messagesテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|content|text| |
+|content|text||
 |image|string||
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
@@ -30,12 +31,12 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|messages|text|foreign_key: true|
-|user_id|integer|null: false, foreign_key: true|
+|group_name|string| |
 
 ### Association
 - has_many :contents
 - has_many :users ,through: :members
+  has_many :members
 
 ## membersテーブル
 
