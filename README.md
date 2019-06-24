@@ -4,11 +4,11 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false|
+|name|string|null: false, index: true|
 
 ### Association
-- has_many :chatgroups, through: :members
-- has_many :contents
+- has_many :groups, through: :members
+- has_many :messages
   has_many :members
 
 ## messagesテーブル
@@ -28,10 +28,10 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|name|string| |
+|name|string|null: false|
 
 ### Association
-- has_many :contents
+- has_many :messages
 - has_many :users ,through: :members
   has_many :members
 
