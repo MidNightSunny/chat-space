@@ -30,7 +30,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|group_name|string| |
+|name|string| |
 
 ### Association
 - has_many :contents
