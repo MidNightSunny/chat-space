@@ -29,7 +29,7 @@
 - belongs_to :group
 - belongs_to :user
 
-## chatgroupsテーブル
+## groupsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
@@ -52,5 +52,5 @@
 |updated_at|datetime|null: false|
 
 ### Association
-- belongs_to :chatgroup
+- belongs_to :group
 - belongs_to :user
