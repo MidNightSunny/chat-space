@@ -11,6 +11,9 @@
 html{
   color:#000;
   background:#FFF;
+  height: 100%;
+  width: 100%;
+
 }
 /*
   TODO remove settings on BODY since we can't namespace it.
@@ -19,7 +22,12 @@ html{
   TODO test putting a class on HEAD.
       - Fails on FF.
 */
-body,
+body{
+  margin:0;
+  padding:0;
+  height: 100%;
+  width: 100%;
+}
 div,
 dl,
 dt,
