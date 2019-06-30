@@ -1,0 +1,105 @@
+@import 'variable';
+
+.Contents{
+  width: calc(100vw - 300px);
+  float: right;
+  &__header{
+    height: 100px;
+    border-bottom: solid 1px;
+    border-bottom-color: #eeeeee;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    &--current-group{
+      font-size: 20px;
+      margin-top: 35px;
+      h2.current-group__name{
+        color: #333333;
+      }
+      ul.current-group__list{
+        font-size: 12px;
+        margin-top: 15px;
+        color: $info-color;
+      }
+    }
+    .btn-edit{
+      text-decoration: none;
+      height: 40px;
+      line-height: 40px;
+      margin-top: 30px;
+      padding: 0 20px;
+      border: solid 1px $btn-color;
+      color: $btn-color;
+    }
+  }
+  &__main{
+    background-color: #fafafa;
+    height: calc(100vh - 263px);
+    padding: 46px 40px;
+    overflow: scroll;
+    .Messages{
+      .Message{
+        padding-bottom: 40px;
+        &__info{
+          display: flex;
+          margin-bottom: 10px;
+          &--user{
+            font-size:16px;
+            font-weight: bold;
+            color: #434a54;
+          }
+          &--date{
+            font-size: 12px;
+            margin-left: 10px;
+            color: $info-color;
+          }
+        }
+        &__text{
+          font-size: 14px;
+        }
+      }
+    } 
+  }
+  &__form{
+    padding: 20px 40px;
+    background-color: #DDDDDD;
+    .New-message{
+      display: flex;
+      .input-box{
+        height: 50px;
+        width: 100%;
+        position: relative;
+        padding: 0 40px 0 10px;
+        input.input-box__text{
+          height: 50px;
+          width: 100%;
+          color: #434a54;
+          border-style: none; 
+          padding: 0 40px 0 10px;     
+        }
+        label.image-label{
+          position:absolute;
+          right: 10px;
+          top: 15px;
+          i.fa.fa-image{
+            font-size: 1.3rem;
+            cursor: pointer;
+          }
+          input.image-label__input{
+            display: none;
+          }
+        } 
+      } 
+      &__btn-send{
+        font-size: 15px;
+        height: 50px;
+        width: 100px;  
+        margin-left: 25px;
+        padding: 0 30px;
+        background-color: $btn-color;
+        color: $font-color;
+        cursor: pointer;
+      }
+    }
+  }
+}
