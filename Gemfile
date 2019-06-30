@@ -56,4 +56,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'haml-rails'
 
 #サイドバーのアイコンに利用
-gem 'font-awesome-sass', '~> 5.8.1'
+gem 'font-awesome-rails'
