@@ -1,62 +1,62 @@
-.Infobar
+.infobar
   グループを作成しました
 
-.Contents
-  .Contents__header
-    .Contents__header--current-group
-      %h2.Current-group__name
+.contents
+  .contents__header
+    .contents__header--current-group
+      %h2.current-group__name
         test
-      %ul.Current-group__list
+      %ul.current-group__list
         list: me you
-    = link_to "Edit", "#", class: 'btn Btn-edit'
-  .Contents__main
-    .Messages
-      .Message
-        .Message__info
-          .Message__info--user
+    = link_to "Edit", "#", class: 'btn btn-edit'
+  .contents__main
+    .messages
+      .message
+        .message__info
+          .message__info--user
             user
-          .Message__info--date
+          .message__info--date
             2020/06/28(Fri) 16:57:11
-        .Message__text
+        .message__text
           hi
-      .Message
-        .Message__info
-          .Message__info--user
+      .message
+        .message__info
+          .message__info--user
             user
-          .Message__info--date
+          .message__info--date
             2020/06/28(Fri) 16:57:13
-        .Message__text
+        .message__text
           uu
-  .Contents__form
-    .New-message
-      = form_tag "#",class: 'Input-box' ,:method => :post do
+  .contents__form
+    .new-message
+      = form_tag "#",class: 'input-box' ,:method => :post do
         %input.Input-box__text{:placeholder => "type a message" ,:type => "text"}
-        %label.Image-label
+        %label.image-label
           %i.fa.fa-image
           %input.Image-label__input{:type => "file"}
-      = button_tag "Send", :type => "submit", :value => :send, class: 'btn New-message__btn-send'
+      = button_tag "Send", :type => "submit", :value => :send, class: 'btn new-message__btn-send'
 
    
-.Sidebar
-  .Sidebar__head
+.sidebar
+  .sidebar__head
     User
-    %ul.User-menu
-      %li.User-menu__new-group
+    %ul.user-menu
+      %li.user-menu__new-group
         =link_to "#" do
           %i.fa.fa-edit
-      %li.User-menu__edit-user
+      %li.user-menu__edit-user
         =link_to "##" do
           %i.fa.fa-cog
-  .Sidebar__bottom
-    .Group
+  .sidebar__bottom
+    .group
       =link_to "#" do
-        .Group__name
+        .group__name
           Group1
-        .Group__latest-message
+        .group__latest-message
           hello
-    .Group
+    .group
       =link_to "#" do
-        .Group__name
+        .group__name
           Group2
-        .Group__latest-message
+        .group__latest-message
           bye
