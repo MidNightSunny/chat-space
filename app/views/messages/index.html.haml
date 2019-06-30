@@ -1,8 +1,62 @@
-.Header
-  .Header__left
-    .Header__left--user-name
-      test
+.Infobar
+  グループを作成しました
+
 .Contents
-  .Contents__left
+  .Contents__header
+    .Contents__header--current-group
+      %h2.current-group__name
+        test
+      %ul.current-group__list
+        list: me you
+    = link_to "Edit", "#", class: 'btn btn-edit'
   .Contents__main
-    .Contents__main--bottom
+    .Messages
+      .Message
+        .Message__info
+          .Message__info--user
+            user
+          .Message__info--date
+            2020/06/28(Fri) 16:57:11
+        .Message__text
+          hi
+      .Message
+        .Message__info
+          .Message__info--user
+            user
+          .Message__info--date
+            2020/06/28(Fri) 16:57:13
+        .Message__text
+          uu
+  .Contents__form
+    .New-message
+      = form_tag "#",class: 'input-box' ,:method => :post do
+        %input.input-box__text{:placeholder => "type a message" ,:type => "text"}
+        %label.image-label
+          %i.fa.fa-image
+          %input.image-label__input{:type => "file"}
+      = button_tag "Send", :type => "submit", :value => :send, class: 'btn New-message__btn-send'
+
+   
+.Sidebar
+  .Sidebar__head
+    User
+    %ul.user-menu
+      %li.user-menu__new-group
+        =link_to "#" do
+          %i.fa.fa-edit
+      %li.user-menu__edit-user
+        =link_to "##" do
+          %i.fa.fa-cog
+  .Sidebar__bottom
+    .Group
+      =link_to "#" do
+        .Group__name
+          Group1
+        .Group__latest-message
+          hello
+    .Group
+      =link_to "#" do
+        .Group__name
+          Group2
+        .Group__latest-message
+          bye
