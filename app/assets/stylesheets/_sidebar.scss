@@ -12,14 +12,14 @@
   align-items: center;
   padding: 0 20px;
   justify-content: space-between;
-  ul.user-menu{
+  ul.User-menu{
     display: flex;
-    li.user-menu__new-group{
+    li.User-menu__new-group{
       i.fa.fa-edit{
         color: $font-color;
       }
     }
-    li.user-menu__edit-user{
+    li.User-menu__edit-user{
       i.fa.fa-cog{
         color: $font-color;
         margin-left: 5px;

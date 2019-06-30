@@ -13,16 +13,16 @@
     &--current-group{
       font-size: 20px;
       margin-top: 35px;
-      h2.current-group__name{
+      h2.Current-group__name{
         color: #333333;
       }
-      ul.current-group__list{
+      ul.Current-group__list{
         font-size: 12px;
         margin-top: 15px;
         color: $info-color;
       }
     }
-    .btn-edit{
+    .Btn-edit{
       text-decoration: none;
       height: 40px;
       line-height: 40px;
@@ -65,19 +65,19 @@
     background-color: #DDDDDD;
     .New-message{
       display: flex;
-      .input-box{
+      .Input-box{
         height: 50px;
         width: 100%;
         position: relative;
         padding: 0 40px 0 10px;
-        input.input-box__text{
+        input.Input-box__text{
           height: 50px;
           width: 100%;
           color: #434a54;
           border-style: none; 
           padding: 0 40px 0 10px;     
         }
-        label.image-label{
+        label.Image-label{
           position:absolute;
           right: 10px;
           top: 15px;
@@ -85,7 +85,7 @@
             font-size: 1.3rem;
             cursor: pointer;
           }
-          input.image-label__input{
+          input.Image-label__input{
             display: none;
           }
         } 
