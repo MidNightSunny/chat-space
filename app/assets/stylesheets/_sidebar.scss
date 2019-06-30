@@ -1,0 +1,53 @@
+@import 'variable';
+
+.sidebar{
+  float: left;
+  width: 300px;
+  &__head{
+  background-color: #253141;
+  color: $font-color;
+  font-weight: bold;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  justify-content: space-between;
+  ul.user-menu{
+    display: flex;
+    li.user-menu__new-group{
+      i.fa.fa-edit{
+        color: $font-color;
+      }
+    }
+    li.user-menu__edit-user{
+      i.fa.fa-cog{
+        color: $font-color;
+        margin-left: 5px;
+     }
+    }
+   }
+  }
+  &__bottom{
+    background-color: #2f3e51;
+    height: calc(100vh - 100px);
+    padding: 20px 20px 0;
+    .group{
+      font-weight: bold;
+      color: $font-color;
+      overflow: scroll;
+      padding-bottom: 40px;
+      color: $font-color;
+      a{
+        text-decoration: none;
+        color: $font-color;
+      }
+      &__name{
+        font-size: 15px;
+        margin-bottom: 5px;
+      }
+      &__latest-message{
+        font-size: 12px;
+      }
+    }
+  }
+}

@@ -1,0 +1,62 @@
+.infobar
+  グループを作成しました
+
+.contents
+  .contents__header
+    .contents__header--current-group
+      %h2.current-group__name
+        test
+      %ul.current-group__list
+        list: me you
+    = link_to "Edit", "#", class: 'btn btn-edit'
+  .contents__main
+    .messages
+      .message
+        .message__info
+          .message__info--user
+            user
+          .message__info--date
+            2020/06/28(Fri) 16:57:11
+        .message__text
+          hi
+      .message
+        .message__info
+          .message__info--user
+            user
+          .message__info--date
+            2020/06/28(Fri) 16:57:13
+        .message__text
+          uu
+  .contents__form
+    .new-message
+      = form_tag "#",class: 'input-box' ,:method => :post do
+        %input.input-box__text{:placeholder => "type a message" ,:type => "text"}
+        %label.image-label
+          %i.fa.fa-image
+          %input.image-label__input{:type => "file"}
+      = button_tag "Send", :type => "submit", :value => :send, class: 'btn new-message__btn-send'
+
+   
+.sidebar
+  .sidebar__head
+    User
+    %ul.user-menu
+      %li.user-menu__new-group
+        =link_to "#" do
+          %i.fa.fa-edit
+      %li.user-menu__edit-user
+        =link_to "##" do
+          %i.fa.fa-cog
+  .sidebar__bottom
+    .group
+      =link_to "#" do
+        .group__name
+          Group1
+        .group__latest-message
+          hello
+    .group
+      =link_to "#" do
+        .group__name
+          Group2
+        .group__latest-message
+          bye
