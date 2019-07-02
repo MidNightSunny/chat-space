@@ -57,3 +57,5 @@ gem 'haml-rails'
 
 #サイドバーのアイコンに利用
 gem 'font-awesome-rails'
+
+gem 'devise'
