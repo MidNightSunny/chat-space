@@ -6,31 +6,15 @@
       %ul.current-group__list
         list: me you
     = link_to "Edit", "/groups/1/edit", class: 'btn btn-edit'
-  .contents__main
-    .messages
-      .message
-        .message__info
-          .message__info--user
-            user
-          .message__info--date
-            2020/06/28(Fri) 16:57:11
-        .message__text
-          hi
-      .message
-        .message__info
-          .message__info--user
-            user
-          .message__info--date
-            2020/06/28(Fri) 16:57:13
-        .message__text
-          uu
-  .contents__form
-    .new-message
-      = form_tag "#",class: 'input-box' ,:method => :post do
-        %input.input-box__text{:placeholder => "type a message" ,:type => "text"}
-        %label.image-label
-          %i.fa.fa-image
-          %input.image-label__input{:type => "file"}
-      = button_tag "Send", :type => "submit", :value => :send, class: 'btn new-message__btn-send'
-
+  .messages
+    = render @messages
+  .new-message
+    .form
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+        .form__mask
+          = f.label :image, class: 'form__mask--image' do
+            = fa_icon 'picture-o', class: 'icon'
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'form__submit'
 = render 'shared/side_bar'
