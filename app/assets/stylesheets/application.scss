@@ -9,5 +9,12 @@
 /*サイドバー*/
 @import 'sidebar';
 
-/*インフォメーションバー*/
-@import 'infobar';
+@import "user";
+
+@import "flash";
+
+@import "group";
+
+@import "messages";
+
+@import "form";

@@ -27,27 +27,27 @@
     }
    }
   }
-  &__bottom{
-    background-color: #2f3e51;
-    height: calc(100vh - 100px);
-    padding: 20px 20px 0;
-    .group{
-      font-weight: bold;
-      color: $font-color;
-      overflow: scroll;
-      padding-bottom: 40px;
-      color: $font-color;
-      a{
-        text-decoration: none;
-        color: $font-color;
-      }
-      &__name{
-        font-size: 15px;
-        margin-bottom: 5px;
-      }
-      &__latest-message{
-        font-size: 12px;
-      }
+}
+
+.groups{
+  background-color: #2f3e51;
+  height: calc(100vh - 100px);
+  padding: 20px 20px 0;
+  overflow: scroll;
+  a{
+    text-decoration: none;
+  }
+  .group{
+    margin-bottom: 40px;  
+    font-weight: bold; 
+    color: $font-color;
+    &__name{
+
+      font-size: 15px;
+      margin-bottom: 5px;
+    }
+    &__latest-message{
+      font-size: 12px;
     }
   }
 }
