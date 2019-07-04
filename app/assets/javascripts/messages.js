@@ -35,7 +35,6 @@ $(function(){
     })
 
     .done(function(message){
-      console.log(this);
       var html = buildMessage(message);
       $('.messages').append(html);
       var element = document.getElementById(message.id);
