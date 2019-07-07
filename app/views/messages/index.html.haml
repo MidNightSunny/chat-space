@@ -2,10 +2,12 @@
   .contents__header
     .contents__header--current-group
       %h2.current-group__name
-        test
+        = @group.name
       %ul.current-group__list
-        list: me you
-    = link_to "Edit", "/groups/1/edit", class: 'btn btn-edit'
+        Member :
+        - @group.users.each do |user|
+          = user.name
+    = link_to "Edit", edit_group_path(@group), class: 'btn btn-edit'
   .messages
     = render @messages
   .new-message
