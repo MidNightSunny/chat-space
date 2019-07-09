@@ -1,3 +1,4 @@
+$(document).on('turbolinks:load', function() {
 $(function(){
   function buildMessage(message){
     var content = message.content ? `<p class="message__text--content"> ${message.content} </p>` : ""
@@ -72,4 +73,5 @@ $(function(){
     });
   };
   setInterval(reloadMessages, 5000);
+});
 });
