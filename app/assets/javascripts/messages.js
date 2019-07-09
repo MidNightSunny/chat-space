@@ -52,7 +52,7 @@ $(function(){
     }else{
       var last_message_id = 0
     }
-debugger
+
     $.ajax({
       url: location.href,
       type: 'GET',
