@@ -3,7 +3,7 @@ $(function(){
   function buildMessage(message){
     var content = message.content ? `<p class="message__text--content"> ${message.content} </p>` : ""
     var image = message.image ? `<img class="message__text--image" img src="${message.image}">` : ""
-    
+    debugger
     var html = `<div class="message" data-id="${message.id}">
                   <div class="message__info">
                     <div class="message__info--user">
@@ -33,13 +33,12 @@ $(function(){
       processData: false,
       contentType: false
     })
-
     .done(function(message){
-      var html = buildMessage(message);
-      $('.messages').append(html);
-      $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight},'fast');
-      $('.form__message').val('');
-      $('.hidden-image').val('');
+        var html = buildMessage(message);
+        $('.messages').append(html);
+        $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight},'fast');
+        $('.form__message').val('');
+        $('.hidden-image').val('');
     })
     .fail(function() {
       alert('メッセージの送信に失敗しました');
@@ -68,7 +67,7 @@ $(function(){
         });         
     })
     .fail(function() {
-      
+        
     });
   };
   setInterval(reloadMessages, 5000);

@@ -23,6 +23,7 @@ $(function() {
     user_ids.push(id);
   }
 
+
   $("#user-search-field.chat-group-form__input").on("keyup", function() {
     var input = $("#user-search-field.chat-group-form__input").val();
     $.ajax({
@@ -51,10 +52,6 @@ $(function() {
     var id =  $(this).attr('data-user-id')-0;
     var name = $(this).attr("data-user-name");
     addUser(id,name);
-    $(this).parent().remove();
-  });
-
-  $("#chat-group-users").on('click','.chat-group-user__btn--remove',function(){
     $(this).parent().remove();
   });
 
