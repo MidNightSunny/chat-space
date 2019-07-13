@@ -3,7 +3,6 @@ $(function(){
   function buildMessage(message){
     var content = message.content ? `<p class="message__text--content"> ${message.content} </p>` : ""
     var image = message.image ? `<img class="message__text--image" img src="${message.image}">` : ""
-    debugger
     var html = `<div class="message" data-id="${message.id}">
                   <div class="message__info">
                     <div class="message__info--user">
